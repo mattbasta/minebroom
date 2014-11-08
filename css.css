@@ -1,109 +1,113 @@
-* {margin:0;padding:0;}
+* {
+	margin: 0;
+	padding: 0;
+}
 
 body {
-	background:#ccc;
-	text-align:center;
+	background: #ccc;
+	text-align: center;
 }
 
 #container {
-	text-align:left;
-	margin:0 auto;
+	margin: 0 auto;
+	text-align: left;
 }
 #container h1 {
-	text-indent:-10000px;
-	background:url('logo.gif') no-repeat center center;
-	height:64px;
+	background: url(img/logo.gif) no-repeat center center;
+	height: 64px;
+	text-indent: -10000px;
 }
 
 .fg-button {
+	cursor: pointer;
+	margin: 0 4px 0 0;
 	outline: 0;
-	margin:0 4px 0 0;
-	padding: .4em 1em;
-	text-decoration:none !important;
-	cursor:pointer;
-	position: relative;
-	text-align: center;
+	padding: 0.4em 1em;
+	position:  relative;
+	text-align:  center;
+	text-decoration: none !important;
 	zoom: 1;
 }
 
 #board {
-	border:3px solid #666;
-	border-right-color:#fff;
-	border-bottom-color:#fff;
-	position:relative;
+	border: 3px solid #666;
+	border-right-color: #fff;
+	border-bottom-color: #fff;
+	position: relative;
 }
 #controls {
-	border:2px solid #666;
-	border-right-color:#fff;
-	border-bottom-color:#fff;
-	margin-bottom:5px;
-	font-family:sans-serif;
-	font-size:16px;
-	padding:10px 4px;
+	border: 2px solid #666;
+	border-bottom-color: #fff;
+	border-right-color: #fff;
+	font-family: sans-serif;
+	font-size: 16px;
+	margin-bottom: 5px;
+	padding: 10px 4px;
 }
 #controls span {
-	background:black;
-	border:2px solid #666;
-	border-right-color:#fff;
-	border-bottom-color:#fff;
-	padding:4px;
-	color:red;
-	margin-top:-6px;
-	text-align:center;
+	background: black;
+	border: 2px solid #666;
+	border-bottom-color: #fff;
+	border-right-color: #fff;
+	color: red;
+	margin-top: -6px;
+	padding: 4px;
+	text-align: center;
 }
-#mines {float:left;}
-#timer {float:right;}
+#mines {
+	float: left;
+}
+#timer {
+	float: right;
+}
 #controls a {
-	height:32px;
-	width:32px;
-	background:url('face_happy.gif') no-repeat center center;
-	display:block;
-	margin:-7px auto;
-	text-indent:-10000px;
-	outline:0;
+	background: url(img/face_happy.gif) no-repeat center center;
+	display: block;
+	height: 32px;
+	margin: -7px auto;
+	outline: 0;
+	text-indent: -10000px;
+	width: 32px;
 }
-#guy.crap {background-image:url('face_crap.gif');}
-#guy.craprem {background-image:url('face_crap_remote.gif');}
-#guy.dead {background-image:url('face_dead.gif');}
-#guy.won {background-image:url('face_smug.gif');}
+#guy.crap {background-image: url(img/face_crap.gif);}
+#guy.craprem {background-image: url(img/face_crap_remote.gif);}
+#guy.dead {background-image: url(img/face_dead.gif);}
+#guy.won {background-image: url(img/face_smug.gif);}
 
 .tile {
-	width:12px;
-	height:12px;
-	background:#ccc;
-	background-repeat:no-repeat;
-	background-position:center center;
-	border:2px solid #fff;
-	border-bottom-color:#666;
-	border-right-color:#666;
-	position:absolute;
-	outline:0;
-	text-indent:-100px;
-	overflow:hidden;
+	background: #ccc;
+	background-position: center center;
+	background-repeat: no-repeat;
+	border: 2px solid #fff;
+	border-bottom-color: #666;
+	border-right-color: #666;
+	height: 12px;
+	outline: 0;
+	overflow: hidden;
+	position: absolute;
+	text-indent: -100px;
+	width: 12px;
 }
 .tile:active,
 .tile.active {
-	border:1px solid #666;
-	border-bottom-color:#ccc;
-	border-right-color:#ccc;
-	outline:0;
-	width:14px;
-	height:14px;
+	border: 1px solid #666;
+	border-bottom-color: #ccc;
+	border-right-color: #ccc;
+	height: 14px;
+	outline: 0;
+	width: 14px;
 }
 
-.one.active {background-image:url('one.gif');}
-.two.active {background-image:url('two.gif');}
-.three.active {background-image:url('three.gif');}
-.four.active {background-image:url('four.gif');}
-.five.active {background-image:url('five.gif');}
-.six.active {background-image:url('six.gif');}
-.seven.active {background-image:url('seven.gif');}
-.eight.active {background-image:url('eight.gif');}
+.one.active {background-image: url(img/one.gif);}
+.two.active {background-image: url(img/two.gif);}
+.three.active {background-image: url(img/three.gif);}
+.four.active {background-image: url(img/four.gif);}
+.five.active {background-image: url(img/five.gif);}
+.six.active {background-image: url(img/six.gif);}
+.seven.active {background-image: url(img/seven.gif);}
+.eight.active {background-image: url(img/eight.gif);}
 
-.tile.flag {background-image:url('flag.gif');}
-.tile.unknown {background-image:url('unknown.gif');}
-.mine.active {background-image:url('mine.gif');}
-.tile.fake {background-image:url('fake.gif');}
-
-
-.clear {clear:both;}
+.tile.flag {background-image: url(img/flag.gif);}
+.tile.unknown {background-image: url(img/unknown.gif);}
+.mine.active {background-image: url(img/mine.gif);}
+.tile.fake {background-image: url(img/fake.gif);}

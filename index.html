@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Minebroom</title>
+  <link href="css.css" rel="stylesheet">
+</head>
+<body>
+  <div id="container">
+    <h1>Minebroom</h1>
+    <div id="controls">
+      <span id="timer">000</span>
+      <span id="mines">250</span>
+      <a id="guy" href="#" onmousedown="return guydown();" onmouseup="return guyup();">Cool Guy</a>
+    </div>
+    <div id="board">
+
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var width = 50, height = 30;
+    var mines = 250;
+  </script>
+  <script type="text/javascript" src="game.js" defer></script>
+</body>
+</html>
