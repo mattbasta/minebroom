@@ -18,7 +18,11 @@ var boardEl = document.getElementById('board');
 var minesEl = document.getElementById('mines');
 var timerEl = document.getElementById('timer');
 
-var init = function() {
+function id(x, y) {
+    return 'x' + x + 'y' + y;
+}
+
+function init() {
     board = [];
 
     while (boardEl.childNodes.length) boardEl.removeChild(boardEl.firstChild);
@@ -48,7 +52,7 @@ var init = function() {
 
             tile.style.left = (i * 16) + 'px';
             tile.style.top = (j * 16) + 'px';
-            tile.id = 'x' + i + 'y' + j;
+            tile.id = id(i, j);
 
             boardEl.appendChild(tile);
         }
@@ -134,7 +138,7 @@ function grid(x, y) {
     if (died) return false;
     if (x < 0 || y < 0 || x >= width || y >= height) return false;
 
-    var mine = document.getElementById('x' + x + 'y' + y);
+    var mine = document.getElementById(id(x, y));
 
     if (mine.classList.contains('active')) return false;
     if (mine.classList.contains('flag')) return false;
@@ -208,7 +212,7 @@ function trygrid(x, y){
 function mark(x, y) {
     if (died) return false;
 
-    var mine = document.getElementById('x' + x + 'y' + y);
+    var mine = document.getElementById(id(x, y));
     if (mine.classList.contains('active')) return false;
 
     if (mine.classList.contains('flag')) {
